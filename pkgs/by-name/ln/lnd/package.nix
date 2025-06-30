@@ -1,5 +1,5 @@
 {
-  buildGoModule,
+  buildGoModule ? callPackage ./go_1.23.9.nix { },
   fetchFromGitHub,
   lib,
   tags ? [
