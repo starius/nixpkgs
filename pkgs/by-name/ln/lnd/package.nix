@@ -49,6 +49,7 @@ buildGoModule rec {
       bleetube
       cypherpunk2140
       prusnak
+      starius
     ];
   };
 }
