@@ -14,13 +14,13 @@
 
 flutter332.buildFlutterApplication rec {
   pname = "venera";
-  version = "1.4.6";
+  version = "1.4.5";
 
   src = fetchFromGitHub {
     owner = "venera-app";
     repo = "venera";
     tag = "v${version}";
-    hash = "sha256-WGzgx+QbAurv9yOJjO40R8t4WtSt/iIkkBuBizT94lQ=";
+    hash = "sha256-yg7VwR1IGswyqkyuvTZnVVLI4YKnfcea+VemWLOUXto=";
   };
 
   pubspecLock = lib.importJSON ./pubspec.lock.json;
@@ -50,7 +50,7 @@ flutter332.buildFlutterApplication rec {
   ];
 
   postInstall = ''
-    install -Dm0644 debian/gui/venera.png $out/share/pixmaps/venera.png
+    install -Dm0644 ./debian/gui/venera.png $out/share/pixmaps/venera.png
   '';
 
   extraWrapProgramArgs = ''
